@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import NoteApp from './components/NoteApp/NoteApp'
+import './App.css'
+import { Route,Routes } from 'react-router-dom'
+import Ss from './components/salam'
+export default function App () {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+        return (
+            <>
+               <Routes>
+                <Route path="/" element={<NoteApp />} />
+                <Route path="/salam" element={<Ss/>} />
+               </Routes>
+            </>
+        )
+    
 }
-
-export default App;
